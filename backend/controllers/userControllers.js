@@ -1,8 +1,8 @@
-const User= require('../models/user')
+const User= require('../models/userModel')
 
 const fetchUsers=async (req, res) => {
     try {
-        const users = await User.find();
+        const users = await userModel.find();
         res.json(users);
     } catch (err) {
         res.status(500).json({ message: err.message });
@@ -11,7 +11,7 @@ const fetchUsers=async (req, res) => {
 const fetchUserById= async  (req, res) => {
     try{
     const userId = req.params.id
-    const userById = await User.findById(userId);
+    const userById = await userModel.findById(userId);
    // console.log(User)
     res.json({userById: userById});
     } catch (err) {
@@ -31,7 +31,7 @@ const newUser = async (req, res) => {
     
 
     try {
-        const user = await User.create({
+        const user = await userModel.create({
             name: name,
 
              email: email,
@@ -47,6 +47,8 @@ const newUser = async (req, res) => {
     }
 };
 const updateUser= async (req, res) => {
+
+    const userId = req.params.id;
    
       const name = req.body.name;
   
@@ -56,9 +58,9 @@ const updateUser= async (req, res) => {
 
      const rating= req.body.rating;
 
-    const userId = req.params.id;
+    
     try {
-        const updatedUser = await User.findByIdAndUpdate(User,{
+        const updatedUser = await userModel.findByIdAndUpdate(userId,{
             name: name,
 
             email: email,
@@ -66,10 +68,10 @@ const updateUser= async (req, res) => {
             password: password,
     
             rating:rating,
-        }
-        {
-            new: true
         });
+        
+           
+      
         res.status(200).json(updatedUser);
     } catch (err) {
         res.status(400).json({ message: err.message });
@@ -79,7 +81,7 @@ const updateUser= async (req, res) => {
 const deleteUser= async (req, res) => {
     const UserId = req.params.id 
     try {
-        await User.findByIdAndDelete(UserId)
+        await userModel.findByIdAndDelete(UserId)
         res.json({ message: 'User deleted' });
     } catch (err) {
         res.status(500).json({ message: err.message });
