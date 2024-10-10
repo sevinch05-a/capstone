@@ -1,0 +1,59 @@
+/* Admin.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc; /* Light background color */
+    color: #333;
+}
+
+.admin-container {
+    max-width: 600px; /* Center the container */
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50; /* Green color for a fresh look */
+    margin-bottom: 30px;
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-form input,
+.product-form select,
+.product-form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.product-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.product-form input[type='file'] {
+    border: none; /* Remove border for file input */
+}
+
+.product-form button {
+    padding: 10px;
+    background-color: #4CAF50; /* Match with header */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.product-form button:hover {
+    background-color: #45a049; /* Darken on hover */
+}

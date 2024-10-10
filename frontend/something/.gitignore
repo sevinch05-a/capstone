@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+node_modules
+.env
+=======
 # Logs
 logs
 *.log
@@ -22,3 +26,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+node_modules
+>>>>>>> 58ba78f (created main page)
