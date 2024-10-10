@@ -19,9 +19,11 @@ function Product() {
 
   // Fetch products on component mount
   useEffect(() => {
+    
     const fetchProducts = async () => {
       try {
         const response = await axios.get('http://localhost:5001/api/products'); // Your API endpoint
+        
         setProducts(response.data);
         setLoading(false);
       } catch (err) {
@@ -29,7 +31,7 @@ function Product() {
         setLoading(false);
       }
     };
-
+    
     fetchProducts();
   }, []);
 
@@ -47,8 +49,10 @@ function Product() {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:5001/api/products', newProduct); // POST request to your API
+      
       setSubmitSuccess('Product added successfully!');
       setSubmitError('');
+
 
       // Add the new product to the products list
       setProducts([...products, response.data]);

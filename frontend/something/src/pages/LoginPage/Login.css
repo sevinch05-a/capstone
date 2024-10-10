@@ -11,6 +11,10 @@
   }
   
   section {
+    background-image: url('https://static7.depositphotos.com/1007989/750/i/450/depositphotos_7507546-stock-photo-nutrition-activity.jpg');
+    background-size: 1900px 800px ;
+    background-repeat: no-repeat;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +23,8 @@
   }
   
   .login {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
+    backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -49,11 +54,11 @@
   }
   
   .inputBox input:focus {
-    border-color: #007bff;
+    border-color: #083c74;
   }
   
   #btn {
-    background-color: #007bff;
+    background-color: #d46f1d;
     color: white;
     padding: 0.75rem;
     border: none;
@@ -64,7 +69,7 @@
   }
   
   #btn:hover {
-    background-color: #0056b3;
+    background-color: #f3a96c;
   }
   
   .subheading {

@@ -49,7 +49,7 @@
   
 }
 #icon{
-  border: solid;
+  /* border: solid; */
   height: 60px;
   width: 60px;
 }
@@ -91,7 +91,7 @@
   width: 80%;
   height: 3px;
   border-radius: 10px;
-  background: red;
+  background: rgb(248, 4, 4);
 }.nav-login cart{
   display: flex;
   align-items: center;
@@ -122,7 +122,7 @@
   margin-left: em;
   border-radius: 11px;
   font-size: 14px;
-  background: red;
+  background: rgb(250, 247, 247);
   color: white;
 }
 

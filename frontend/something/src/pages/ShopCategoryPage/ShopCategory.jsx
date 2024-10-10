@@ -59,7 +59,27 @@ function ShopCategory() {
         { description: 'Girl Bumble Bee 2 Costume', price: 34.99, image: '/girl-bumble-bee2.jpg' },
         { description: 'Newborn Bee Costume', price: 29.99, image: '/newborn-bee.jpg' },
         { description: 'Newborn Bumble Bee 2 Costume', price: 34.99, image: '/newborn-bumble-bee2.jpg' },
-    ]
+    ];
+    return (
+        <div className="shop-category">
+            <h1>Shop Costumes</h1>
+            <div className="product-list">
+                {menuSection.map((product, index) => (
+                    <div key={index} className="product-card">
+                        <img src={product.image} alt={product.description} className="product-image" />
+                        <h2 className="product-description">{product.description}</h2>
+                        <p className="product-price">${product.price.toFixed(2)}</p>
+                        <Link to="/cart" className="add-to-cart-button">Add to Cart</Link>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+
+
+
+
+
 }
 
 

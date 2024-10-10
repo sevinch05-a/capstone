@@ -1,10 +1,17 @@
 .hero{
-    margin-right: 1px;
+    /* margin-right: 1px; */
     height: 1000px;
-    background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+    /* background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%); */
     display: flex;
+    justify-content: space-around;
+    
+    width: 500px;
+    /* margin-left: 150px; */
+     
+    
+     
 }
-.hero-left{
+/* .hero-left{
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -45,14 +52,14 @@
   color: white;
   font-size: 22px;
   font-weight: 500;  
-}
+} */
 #arrow{
     height: 20px;
     width: 20px;
 }
 .hero-right video{
     margin-right: 1px;
-    width: 100%;
+    width: 70%;
     height: 80%;
 }
 .hero-right{
@@ -64,3 +71,16 @@
     
   
 }
+.hero-container video {
+    
+   
+     
+  }
+   
+
+  .onePic {
+    width: 500px;
+    margin-bottom: 350px;
+     
+
+  }
