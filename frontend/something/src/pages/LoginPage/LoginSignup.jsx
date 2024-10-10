@@ -1,15 +1,46 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 
 function LoginSignup() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    // Здесь вы можете добавить логику для отправки данных на сервер
-    console.log('Logging in with', { username, password });
+
+    const loginData = {
+      username,
+      password
+    };
+
+    try {
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(loginData),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        console.log('Logged in successfully:', data);
+        // Save the token in localStorage or cookies
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('userId', data.user.id);
+        
+        // Redirect to admin page
+        navigate('/admin');
+      } else {
+        setError(data.msg); // Display error message from backend
+      }
+    } catch (err) {
+      console.error('Error logging in:', err);
+      setError('Server error. Please try again later.');
+    }
   };
 
   return (
@@ -35,6 +66,7 @@ function LoginSignup() {
               required
             />
           </div>
+          {error && <p className="error">{error}</p>}
           <div className="inputBox">
             <input type="submit" value="Login" id="btn" />
           </div>

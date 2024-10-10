@@ -10,7 +10,7 @@ import Cart from './pages/CartPage/Cart';
 import LoginSignup from './pages/LoginPage/LoginSignup';
 import Admin from './pages/AdminPage/Admin';
 import ShopCategory from './pages/ShopCategoryPage/ShopCategory';
-
+// import { CartProvider } from './components/context/CartContext';
 
 
 

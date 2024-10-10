@@ -1,4 +1,103 @@
-section {
+/* Basic CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .login {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 100%;
+  }
+  
+  .login h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .inputBox {
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  .inputBox input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .inputBox input:focus {
+    border-color: #007bff;
+  }
+  
+  #btn {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .subheading {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 14px;
+  }
+  
+  .subheading a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .subheading a:hover {
+    text-decoration: underline;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+
+
+
+
+
+
+
+
+/* section {
     background-image: url('https://static7.depositphotos.com/1007989/750/i/450/depositphotos_7507546-stock-photo-nutrition-activity.jpg');
     background-size: 1900px 800px ;
     background-repeat: no-repeat;
@@ -34,7 +133,7 @@ section {
     height: 80%;
     border-radius: 5px;
     margin-bottom: 50px;
-}
+} */
 /* section .bg{
 
     position: absolute;

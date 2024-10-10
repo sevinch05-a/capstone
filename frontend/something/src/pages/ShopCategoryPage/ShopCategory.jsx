@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ShopCategory.css';
+// import { useCart } from '../../components/context/CartContext'; 
+// import dropdown_icon from '/dropdown-icon.png';
 
 function ShopCategory() {
+//    const { addProductToCart } = useContext(OrderContext);
     const menuSection = [
+       
         { description: 'Baby Ice Cream Costume', price: 29.99, image: '/baby ice cream.jpg' },
         { description: 'Newborn Ice Cream Costume', price: 34.99, image: '/newborn-ice-cream.jpg' },
         { description: 'Baby Ice Cream Costume', price: 29.99, image: '/baby ice cream.jpg' },
@@ -55,31 +59,45 @@ function ShopCategory() {
         { description: 'Girl Bumble Bee 2 Costume', price: 34.99, image: '/girl-bumble-bee2.jpg' },
         { description: 'Newborn Bee Costume', price: 29.99, image: '/newborn-bee.jpg' },
         { description: 'Newborn Bumble Bee 2 Costume', price: 34.99, image: '/newborn-bumble-bee2.jpg' },
-    ];
-
-    const handleAddToCart = (item) => {
-        console.log(`Added to cart: ${item.description}`);
-    };
-
-    return (
-        <div className="shop-category">
-            <h1>Costume Shop</h1>
-            <div className="menu-items">
-                {menuSection.map((item, index) => (
-                    <div key={index} className="menu-item">
-                        <img src={item.image} alt={item.description} />
-                        <h2>{item.description}</h2>
-                        <p>${item.price.toFixed(2)}</p>
-                        <Link to="/Cart" onClick={() => handleAddToCart(item)} className="add-to-cart">
-                          Add to cart
-                        </Link>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
+    ]
 }
 
+
+
+   
+     
+{/* <div className="shopcategory-indexSort">
+    <p>
+        <span>Showing 1-50</span> out of 68 costumes
+    </p>
+    <div className="shopcategory-sort">
+        Sort by <img src={dropdown_icon} alt=""/>
+    </div>
+</div> */}
+//     const handleAddToCart = (item) => {
+//         console.log(`Added to cart: ${item.description}`);
+//     };
+//     function ShopCategory() {
+//         const { addToCart } = useCart();
+//     return (
+//         <div className="shop-category">
+//             <h1>Costume Shop</h1>
+//             <div className="menu-items">
+//                 {menuSection.map((item, index) => (
+//                     <div key={index} className="menu-item">
+//                         <img src={item.image} alt={item.description} />
+//                         <h2>{item.description}</h2>
+//                         <p>${item.price.toFixed(2)}</p>
+//                         <Link to="/Cart" onClick={() => handleAddToCart(item)} className="add-to-cart">
+//                           Add to cart
+//                         </Link>
+//                     </div>
+//                 ))}
+//             </div>
+//         </div>
+//     );
+// }
+ 
 export default ShopCategory;
 
 
