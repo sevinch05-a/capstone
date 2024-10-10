@@ -5,11 +5,12 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Shop from './pages/ShopPage/Shop';
-import ShopCategory from './pages/ShopCategoryPage/ShopCategory';
 import Product from './pages/ProductPage/Product';
 import Cart from './pages/CartPage/Cart';
 import LoginSignup from './pages/LoginPage/LoginSignup';
 import Admin from './pages/AdminPage/Admin';
+import ShopCategory from './pages/ShopCategoryPage/ShopCategory';
+
 
 
 
